@@ -1,1 +1,0 @@
-/usr/bin/cc  -g -g CMakeFiles/first.dir/command/command.c.o CMakeFiles/first.dir/command/command_handler.c.o CMakeFiles/first.dir/main.c.o -o first 

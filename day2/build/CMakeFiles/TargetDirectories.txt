@@ -1,3 +1,0 @@
-/home/owen/THEONETHING/day2/build/CMakeFiles/first.dir
-/home/owen/THEONETHING/day2/build/CMakeFiles/edit_cache.dir
-/home/owen/THEONETHING/day2/build/CMakeFiles/rebuild_cache.dir
