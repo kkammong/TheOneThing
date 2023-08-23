@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "command_call_table.h": "c",
+        "command.h": "c",
+        "user_input.h": "c",
+        "member_request.h": "c"
+    }
+}
