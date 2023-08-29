@@ -1,4 +1,5 @@
 #include "member_command_handler.h"
+#include "../entity/member.h"
 
 #include "../service/member_service_command.h"
 #include "../service/member_service_handler.h"
@@ -9,6 +10,7 @@
 #include "../../ui/console/user_input.h"
 
 #include <stdio.h>
+#include <string.h>
 
 void member_register (void) {
     char id[5] = "id: ";
@@ -37,11 +39,10 @@ void member_login (void) {
     printf("member controller: login()\n");
 
     get_user_input_with_msg(id, user_input_id);
-    ger_user_input_wiht_msg(password, user_input_password);
+    get_user_input_with_msg(password, user_input_password);
 
     member_request *member_request_object = init_member_request(user_input_id, user_input_password);
     member_service_table[MEMBER_LOGIN_SERVICE](member_request_object);
-
 
 }
 
