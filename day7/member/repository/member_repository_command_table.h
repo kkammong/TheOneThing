@@ -18,4 +18,6 @@ const member_repository_call_ptr_t member_repository_table[MEMBER_REPOSITORY_CAL
 #include "member_repository_command_table_mapper.h"
 };
 
+
+
 #endif

@@ -1,0 +1,30 @@
+<untitled> - 23.08.29
+
+member_save_repository 함수를 어디서 호출하는가?
+
+service layer에서 호출하겠지?
+service layer의 member_service_handler.c 파일을 보면,
+
+member_repository_table[MEMBER_SAVE_REPOSITORY](member_object);
+
+라는 함수를 배열의 표 형태로 구현한(?) 함수 포인터 인터페이스를 호출하고 있다.
+위 코드가 무엇을 호출하는 함수가 뭐냐하면 member_save_repository이다.
+
+그럼 이 함수로 하려는 것이 무엇이냐? 를 알기 위해서는 다시 돌아가서
+member_service_handler.c에 정의되어 있던 member_register_service 함수를 어디서 호출했는지를 보면 된다.
+
+이 함수는 사용자가 회원가입을 하기 위한 명령어를 입력했는 때 실행되는 함수이다.
+더 구체적으로는 사용자가 회원가입을 하기 위해 명령어를 입력한 후
+회원가입에 필요한 id와 password를 입력한 후에 실행되는 함수이다.
+
+주어진 id와 password로 uniqure_value가 추가된 member라는 새로운 객체를 생성하고
+이 객체를 repository layer에 저장하기 위해 호출하는 함수인 것이다.
+
+정리하면, 사용자가 회원가입하기 위해 id와 password를 입력한 후
+이 정보에 unique value를 추가하여 respository에 정보를 기록해놓기 위한 함수가
+member_save_repository 함수인 것이다.
+
+그럼 이제 해당함수의 정의를 작성해보자.
+
+
+
